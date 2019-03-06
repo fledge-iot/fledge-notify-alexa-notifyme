@@ -20,6 +20,7 @@ To build FogLAMP "alexa notification" C++ plugin:
 
 .. code-block:: console
 
+  $ ./requirements.sh
   $ mkdir build
   $ cd build
   $ cmake ..
@@ -89,12 +90,10 @@ Run the make_deb command after compiling the plugin:
 .. code-block:: console
 
   $ ./make_deb help
-  make_deb {x86|arm} [help|clean|cleanall]
+  make_deb [help|clean|cleanall]
   This script is used to create the Debian package of FoglAMP C++ 'Alexa notification' plugin
   Arguments:
    help     - Display this help text
-   x86      - Build an x86_64 package
-   arm      - Build an armv7l package
    clean    - Remove all the old versions saved in format .XXXX
    cleanall - Remove all the versions, including the last one
   $
