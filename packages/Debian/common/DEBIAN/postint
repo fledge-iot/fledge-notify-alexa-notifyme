@@ -28,7 +28,7 @@
 set -e
 
 set_files_ownership () {
-    chown -R root:root /usr/local/foglamp/plugins/notif/alexa
+    chown -R root:root /usr/local/foglamp/plugins/notificationDelivery/alexa
 }
 
 set_files_ownership
