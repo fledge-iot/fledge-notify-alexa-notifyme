@@ -22,4 +22,4 @@
 
 set -e
 
-sudo apt-get install libcurl4-openssl-dev
+sudo apt -y install libcurl4-openssl-dev
