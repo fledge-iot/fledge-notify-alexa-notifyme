@@ -106,11 +106,14 @@ Finally, run the ``make_deb`` command:
 .. code-block:: console
 
    $ ./make_deb
-   The package root directory is   : /home/ubuntu/source/foglamp-notify-alexa
-   The FogLAMP required version    : >=1.4
-   The package will be built in    : /home/ubuntu/source/foglamp-notify-alexa/packages/build
-   The architecture is set as      : x86_64
-   The package name is             : foglamp-notify-alexa-1.0.0-x86_64
+   The package root directory is                : /home/ubuntu/source/foglamp-notify-alexa
+   The FogLAMP required version                 : >=1.5
+   The Service notification required version    : >=1.5.2
+   The package will be built in                 : /home/ubuntu/source/foglamp-notify-alexa/packages/build
+   The architecture is set as                   : x86_64
+   The package name is                          : foglamp-notify-alexa-1.0.0-x86_64
+
+   ....
 
    Populating the package and updating version file...Done.
    Building the new package...
