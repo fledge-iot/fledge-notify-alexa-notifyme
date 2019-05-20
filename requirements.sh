@@ -28,12 +28,12 @@ os_version=`(grep -o '^VERSION_ID=.*' /etc/os-release | cut -f2 -d\" | sed 's/"/
 echo "Platform is ${os_name}, Version: ${os_version}"
 
 if [[ ( $os_name == *"Red Hat"* || $os_name == *"CentOS"* ) &&  $os_version == *"7"* ]]; then
-	yum -y install curl
-	yum -y install libcurl
-	yum -y install curl-devel
-	yum -y install libcurl-devel
+	sudo yum -y install curl
+	sudo yum -y install libcurl
+	sudo yum -y install curl-devel
+	sudo yum -y install libcurl-devel
 elif apt --version 2>/dev/null; then
-	apt -y install libcurl4-openssl-dev
+	sudo apt -y install libcurl4-openssl-dev
 else
 	echo "Requirements cannot be automatically installed, please refer README.rst to install requirements manually"
 fi
