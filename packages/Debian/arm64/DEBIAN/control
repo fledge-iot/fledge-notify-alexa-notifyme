@@ -2,7 +2,7 @@ Package: foglamp-notify-alexa
 Version: 1.0.0
 Section: devel
 Priority: optional
-Architecture: amd64
+Architecture: arm64
 Depends: foglamp,foglamp-service-notification,libcurl4-openssl-dev
 Conflicts:
 Maintainer: Dianomic Systems, Inc. <info@dianomic.com>
