@@ -8,19 +8,21 @@ plugin_install_dirname=alexa
 #   1. Generic packages we depend on in all architectures and package managers
 #   2. Architecture specific packages we depend on
 #   3. Package manager specific packages we depend on
-requirements="foglamp,foglamp-service-notification,curl,libcurl,curl-devel,libcurl-devel"
+requirements="foglamp,foglamp-service-notification"
 
 case "$arch" in
 	x86_64)
 		;;
-	armhf)
+	armv7l)
 		;;
 	aarch64)
 		;;
 esac
 case "$package_manager" in
-	deb)
-		;;
-	rpm)
-		;;
+    deb)
+        requirements="${requirements},libcurl4-openssl-dev"
+        ;;
+    rpm)
+        requirements="${requirements},curl,libcurl,curl-devel,libcurl-devel"
+        ;;
 esac
