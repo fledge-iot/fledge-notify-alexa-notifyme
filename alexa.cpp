@@ -1,5 +1,5 @@
 /*
- * FogLAMP "alexa" notification delivery plugin.
+ * Fledge "alexa" notification delivery plugin.
  *
  * Copyright (c) 2019 Dianomic Systems
  *
