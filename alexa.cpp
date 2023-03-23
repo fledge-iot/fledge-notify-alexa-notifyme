@@ -46,6 +46,8 @@ bool Alexa::notify(const string& notificationName, const string& triggerReason, 
 	ostringstream   payload;
 	SimpleHttps	*https;
 
+	bool retVal = true;
+
 	lock_guard<mutex> guard(m_mutex);
 	payload << "{ \"notification\" : \"";
 	payload << notificationName;
@@ -95,15 +97,15 @@ bool Alexa::notify(const string& notificationName, const string& triggerReason, 
          	if(strResCode[0] != '2')
          	{
 			Logger::getLogger()->error("Failed to send notification to Alexa NotifyMe  %s, resCode %d", url.c_str(), resCode);
-			return false;
+			retVal = false;
 	 	}
 	} catch (exception &e) {
 		Logger::getLogger()->error("Exception sending HTTP request: %s",
 				e.what());
-		return false;
+		retVal = false;
 	}
 	delete https;
-	return true;
+	return retVal;
 }
 
 /**
