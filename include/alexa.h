@@ -15,7 +15,7 @@ class Alexa {
 	public:
 		Alexa(ConfigCategory *config);
 		~Alexa();
-		void	notify(const std::string& notificationName, const std::string& triggerReason, const std::string& message);
+		bool	notify(const std::string& notificationName, const std::string& triggerReason, const std::string& message);
 		void	reconfigure(const std::string& newConfig);
 	private:
 		std::string	m_accessCode;
