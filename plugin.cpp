@@ -95,8 +95,7 @@ bool plugin_deliver(PLUGIN_HANDLE handle,
 	Logger::getLogger()->info("Alexa notification plugin_deliver(): deliveryName=%s, notificationName=%s, triggerReason=%s, message=%s",
 							deliveryName.c_str(), notificationName.c_str(), triggerReason.c_str(), message.c_str());
 	Alexa *alexa = (Alexa *)handle;
-	alexa->notify(notificationName, triggerReason, message);
-	return true;
+	return alexa->notify(notificationName, triggerReason, message);
 }
 
 /**
